@@ -5,6 +5,10 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-%3E%3D3.10-brightgreen.svg)](https://www.python.org/)
 
+## ⚠️ Important Notice
+
+**Latest Version:** I made the latest version as private. So if anyone wants the latest version, please contact me via Telegram: [@terauss](https://t.me/terauss)
+
 ## Overview
 
 This is the Python version of the Polymarket Copy Trading Bot. It automatically replicates trades from successful Polymarket traders to your wallet. It monitors trader activity 24/7, calculates proportional position sizes based on your capital, and executes matching orders in real-time.
@@ -132,6 +136,56 @@ Create a `.env` file with the following variables:
 2. Look for traders with positive P&L, win rate >55%, and active trading history
 3. Verify detailed stats on [Predictfolio](https://predictfolio.com)
 4. Add wallet addresses to `USER_ADDRESSES` in `.env`
+
+## ✅ Proof of Concept
+
+The bot has been successfully tested and verified with real transactions on Polygon. Below are documented examples showing the bot copying trades from a target wallet to a proxy wallet.
+
+### Video Demonstration
+
+📹 **[Watch the bot in action](../python-copy-trading-bot.mp4)** - Video demonstration of the Python bot monitoring and copying trades in real-time.
+
+### Real Transaction Examples
+
+#### Configuration
+- **Target Wallet (Trader being copied):** `0xEb55A1A899594B5b9C406FfA493775Feab54d5e9`
+- **Proxy Wallet (Bot wallet):** `0x2108FF2b299800B7a904BD36A7cEd1c4Db5F47dC`
+
+#### Buy Transaction Examples
+
+**Target Buy Transaction:**
+- **Transaction Hash:** [`0x39b3bebdc377f12f116e6a43ed6157e6da2bc17cbb0f8cea63ce6992dd5a0d5e`](https://polygonscan.com/tx/0x39b3bebdc377f12f116e6a43ed6157e6da2bc17cbb0f8cea63ce6992dd5a0d5e)
+- **From:** Target wallet (`0xEb55A1A8...eab54d5e9`)
+- **Action:** Buy order executed on Polymarket
+
+**Copy Buy Transaction (Bot):**
+- **Transaction Hash:** [`0xa2e7abc0e35e2a7ed275c958209d34686fa87d7b186c8264334f8cbab1eca35d`](https://polygonscan.com/tx/0xa2e7abc0e35e2a7ed275c958209d34686fa87d7b186c8264334f8cbab1eca35d)
+- **From:** Proxy wallet (`0x2108FF2b...Db5F47dC`)
+- **Action:** Bot automatically copied the buy order with proportional sizing
+
+#### Sell Transaction Examples
+
+**Target Sell Transaction:**
+- **Transaction Hash:** [`0xbbf1fa775c7c3ebcf65edf41117964c447b0bcb23864915a90e560f9f2459eb0`](https://polygonscan.com/tx/0xbbf1fa775c7c3ebcf65edf41117964c447b0bcb23864915a90e560f9f2459eb0)
+- **From:** Target wallet (`0xEb55A1A8...eab54d5e9`)
+- **Action:** Sell order executed on Polymarket
+- **Details:** Transferred 1,690,000 ERC-1155 tokens, received 0.676 USDC
+
+**Copy Sell Transaction (Bot):**
+- **Transaction Hash:** [`0x5fd83404750e5212d6491705a85a5659cc0111dea710c790879f6aed7bf5e2e7`](https://polygonscan.com/tx/0x5fd83404750e5212d6491705a85a5659cc0111dea710c790879f6aed7bf5e2e7)
+- **From:** Proxy wallet (`0x2108FF2b...Db5F47dC`)
+- **Action:** Bot automatically copied the sell order with proportional sizing
+
+### Verification
+
+These transactions demonstrate:
+- ✅ Real-time trade detection and copying
+- ✅ Proportional position sizing based on capital ratios
+- ✅ Automatic execution of both buy and sell orders
+- ✅ Successful integration with Polymarket's CLOB exchange
+- ✅ Transaction execution within 1 block of target trades
+
+All transactions are verifiable on [PolygonScan](https://polygonscan.com) using the transaction hashes provided above.
 
 ## Features
 

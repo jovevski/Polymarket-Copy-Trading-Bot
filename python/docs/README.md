@@ -34,6 +34,12 @@ Welcome to the Polymarket Copy Trading Bot documentation. This directory contain
    - Troubleshooting examples
    - Advanced use cases
 
+5. **[Proof of Concept](PROOF.md)** ⭐ **VERIFICATION**
+   - Real transaction examples
+   - Video demonstration
+   - Verification checklist
+   - Performance metrics
+
 ## 📖 Documentation Structure
 
 ```
@@ -42,7 +48,8 @@ docs/
 ├── GETTING_STARTED.md     # Complete setup guide
 ├── COMMAND_REFERENCE.md   # All commands explained
 ├── STRATEGY.md            # Copy trading strategy guide
-└── EXAMPLES.md           # Practical usage examples
+├── EXAMPLES.md           # Practical usage examples
+└── PROOF.md              # Proof of concept with real transactions
 ```
 
 ## 🚀 Quick Start
@@ -69,6 +76,11 @@ If you're new to the bot, follow this path:
    - See real-world usage
    - Copy working examples
    - Learn best practices
+
+5. **Review [Proof of Concept](PROOF.md)**
+   - See verified real transactions
+   - Watch video demonstration
+   - Verify bot functionality
 
 ## 📋 Documentation by Topic
 
